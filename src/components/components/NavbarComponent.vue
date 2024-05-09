@@ -9,10 +9,10 @@
                 <div class="w-100 d-flex align-items-lg-center align-items-start flex-lg-row flex-column-reverse">
                     <div class="w-100 d-flex justify-content-start justify-content-lg-center">
                         <div class="navbar-nav ">
-                            <a class="nav-link fw-semibold m-0" v-bind:class="[dark_mode ? 'text-white':'primary-font']" >Home</a>
-                            <a class="nav-link fw-semibold m-0" v-bind:class="[dark_mode ? 'text-white':'primary-font']" >About</a>
-                            <a class="nav-link fw-semibold m-0" v-bind:class="[dark_mode ? 'text-white':'primary-font']" >Project</a>
-                            <a class="nav-link fw-semibold m-0" v-bind:class="[dark_mode ? 'text-white':'primary-font']" >Contact</a>
+                            <a class="nav-link fw-semibold m-0 cursor-pointer" v-bind:class="[dark_mode ? 'text-white':'primary-font']" href="#home" >Home</a>
+                            <a class="nav-link fw-semibold m-0 cursor-pointer" v-bind:class="[dark_mode ? 'text-white':'primary-font']" href="#About" >About</a>
+                            <a class="nav-link fw-semibold m-0 cursor-pointer" v-bind:class="[dark_mode ? 'text-white':'primary-font']" href="#Projects" >Project</a>
+                            <a class="nav-link fw-semibold m-0 cursor-pointer" v-bind:class="[dark_mode ? 'text-white':'primary-font']" href="#Contact" >Contact</a>
                         </div>
                     </div>
                     <ToggleMode

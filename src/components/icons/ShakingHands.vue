@@ -25,19 +25,5 @@
     }
 </script>
 <style>
-    .hands:hover{
-        animation: scale-and-shake linear infinite;
-    }
 
-    .vibrations{
-
-    }
-
-    @keyframes scale-and-shake {
-        0% { transform: rotate(0deg); }
-        25% { transform: rotate(5deg); }
-        50% { transform: rotate(0eg); }
-        75% { transform: rotate(-5deg); }
-        100% { transform: rotate(0deg); }
-    }
 </style>
