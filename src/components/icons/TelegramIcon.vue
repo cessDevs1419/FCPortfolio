@@ -1,0 +1,24 @@
+<template>
+    <div class="rounded-circle p-2 socmed-icons" :style="{ backgroundColor: bgcolor }">
+        <svg :width="width" :height="height" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_272_10)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M52.7401 11.8132C55.6412 10.5917 58.7513 13.0449 58.239 16.1507L52.1886 52.8353C51.6052 56.3723 47.7204 58.4019 44.4753 56.6393C41.7598 55.1643 37.731 52.8942 34.1001 50.5217C32.287 49.3369 26.7353 45.5379 27.4177 42.8337C28.0012 40.5214 37.3342 31.8337 42.6676 26.667C44.7625 24.6375 43.8084 23.465 41.3342 25.3337C35.1966 29.9691 25.3428 37.0169 22.0843 39.0003C19.2093 40.7502 17.7081 41.0489 15.9176 40.7502C12.6479 40.2054 9.61653 39.3617 7.14165 38.3358C3.79667 36.9491 3.9596 32.3523 7.13939 31.0137L52.7401 11.8132Z" fill="#3AB0FF"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_272_10">
+            <rect width="64" height="64" fill="white"/>
+            </clipPath>
+            </defs>
+        </svg>  
+    </div>
+</template>
+<script>
+    export default{
+        props: {
+            bgcolor: String,
+            color: String,
+            height: Number,
+            width: Number
+        }
+    }
+</script>

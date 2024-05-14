@@ -27,3 +27,13 @@
 .cursor-pointer{
     cursor: pointer;
 }
+
+.z-ult{
+    z-index: 10000;
+}
+
+.socmed-icons{
+    max-width: 45px;
+    min-width: 45px;
+    height: 45px;
+}

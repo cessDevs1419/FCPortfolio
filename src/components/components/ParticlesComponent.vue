@@ -11,12 +11,16 @@
     }
 
     const configs = {
+        fullScreen:{
+            enable:true,
+            zIndex:	0
+        },
         particles: {
             number: {
-                value: 20
+                value: 30
             },
             color: {
-                value: "#3AB0FF"
+                value: "#9FD9FF"
             },
             links: {
                 enable: true,
@@ -31,20 +35,14 @@
             },
             size: {
                 value: {
-                    min: 10,
+                    min: 0,
                     max: 20
                 }
             },
             move: {
                 enable: true,
-                speed: 2
+                speed: 4
             }
-        },
-        background: {
-            color: ""
-        },
-        poisson: {
-            enable: true
         }
     };
 
@@ -52,34 +50,7 @@
 </script>
 
 <style>
-
-    .github {
-        bottom: 10px;
-        right: 10px;
-        position: fixed;
-        border-radius: 10px;
-        background: #fff;
-        padding: 0 12px 6px 12px;
-        border: 1px solid #000;
+    canvas{
+        z-index: -1;
     }
-
-    .github a:hover,
-    .github a:link,
-    .github a:visited,
-    .github a:active {
-        color: #000;
-        text-decoration: none;
-    }
-
-    .github img {
-        height: 30px;
-    }
-
-    .github #gh-project {
-        font-size: 20px;
-        padding-left: 5px;
-        font-weight: bold;
-        vertical-align: bottom;
-    }
-
 </style>
