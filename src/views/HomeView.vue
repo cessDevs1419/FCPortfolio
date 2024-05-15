@@ -76,8 +76,55 @@
         </div>
     </div>
     <div id="projects" class="full-height w-100 d-flex align-items-center primary-color" v-bind:class="[dark_mode ? 'primary-color':'bg-white']">
+        <div class="container-md">
+            <h1 class="fw-bold about-title text-center mb-5" v-bind:class="[dark_mode ? 'text-white':'primary-font']" >My <span class="secondary-font fw-bold text-center">Projects</span></h1>
+            <div class="row w-100 h-100 m-auto ">
+                 <div class="col-auto m-auto mb-3 z-ult" v-for="(project, index) in projects" :key="index">
+                    <div class="card border-0 box-shadow overflow-hidden border" v-bind:class="[dark_mode ? 'primary-color':'bg-white']">
+                        <div class="row flex-column w-100 m-auto px0">
+                            <div class="col-auto pt-3 d-flex align-items-center">
+                                <div :id="'carouselExampleIndicators'+index" class="carousel slide  w-100 overflow-hidden">
+                                    <div class="carousel-inner position-relative overflow-hidden align-items-center">
+                                        <template  v-for="(images, index) in project.images" :key="index">
+                                            <div class="carousel-item cursor-pointer card-img border overflow-y-auto" v-bind:class="index === 0 ? 'active':''" >
+                                                <img :src="images" class=" h-100 w-100 my-auto" alt="projects">
+                                            </div>
+                                        </template>
+                                        <div class="type px-3 py-2 position-absolute box-shadow top-0 mt-5 secondary-color text-white">
+                                            <h5 class="m-0">{{project.type}}</h5>
+                                        </div>
+                                    </div>
+                                    <template v-if="project.images.length > 1">
+                                        <button class="carousel-control-prev" type="button" :data-bs-target="'#carouselExampleIndicators'+index" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" :data-bs-target="'#carouselExampleIndicators'+index" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </template>
+        
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="card-body" v-bind:class="[dark_mode ? 'text-white':'primary-font']">
+                                    <h5 class="card-title fw-bold">{{project.name}}</h5>
+                                    <p class="card-text">{{project.description}}</p>
+                                    <ul class="list-unstyled d-flex flex-wrap">
+                                      <li class="tech cursor-pointer text-decoration-none px-3 mb-2 py-2 border border-2 m-auto rounded-4 " v-for="(tech, index) in project.technologies" :key="index" >
+                                          {{ tech }}
+                                      </li>
+                                    </ul>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
     </div>
-    <div id="contact" class="full-height w-100 d-flex align-items-center primary-color" v-bind:class="[dark_mode ? 'primary-color':'bg-white']">
+    <!-- <div id="contact" class="full-height w-100 d-flex align-items-center primary-color" v-bind:class="[dark_mode ? 'primary-color':'bg-white']">
         <div class="container-lg ">
             <div class="row d-flex align-items-center w-100 m-auto">
                 <div class="col-lg-5 d-lg-flex d-none">
@@ -108,7 +155,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="thanks full-height w-100 d-flex align-items-center primary-color" v-bind:class="[dark_mode ? 'primary-color':'bg-white']">
         <div class="container-md">
             <div class="title-container me-lg-5 me-0 z-ult w-100 d-flex flex-column align-items-center justify-content-center">
@@ -127,8 +174,8 @@
             </div>
         </div>
     </div>
-    <ParticlesComponent v-if="visible">
-    </ParticlesComponent>
+    <!-- <ParticlesComponent v-if="visible">
+    </ParticlesComponent> -->
 </template>
 
 <script>
@@ -138,36 +185,19 @@
     import LinkedIcon from '@/components/icons/LinkedIcon.vue'
     import TelegramIcon from '@/components/icons/TelegramIcon.vue'
 
-    import htmlLogo from '../assets/technologies/html.png';
-    import cssLogo from '../assets/technologies/css.png';
-    import jsLogo from '../assets/technologies/javascript.png';
-    import tsLogo from '../assets/technologies/typescript.png';
-    import vscodeLogo from '../assets/technologies/visual-studio-code.png';
-    import githubLogo from '../assets/technologies/github.png';
-    import reactLogo from '../assets/technologies/react.png';
-    import angularLogo from '../assets/technologies/angularjs.png';
-    import vueLogo from '../assets/technologies/vue.png';
-    
-    
+    import Technologies from '@/assets/data/technologies.js'
+    import Projects from '@/assets/data/projects.js'
+
     export default {
         data () {
             return {
-                technologies: [
-                    htmlLogo,
-                    cssLogo,
-                    jsLogo,
-                    tsLogo,
-                    vscodeLogo,
-                    githubLogo,
-                    reactLogo,
-                    angularLogo,
-                    vueLogo,
-                ],
                 form: {
                     email: '',
                     subject: '',
                     message: '',
                 },
+                technologies: Technologies,
+                projects: Projects,
                 visible: window.innerWidth >= 340,
                 windowWidth: window.innerWidth
             }
@@ -201,6 +231,9 @@
             handleResize() {
                 this.windowWidth = window.innerWidth;
                 this.visible = this.windowWidth >= 340;
+            },
+            getData(){
+                console.log(this.projects)
             }
         },
         components:{
@@ -212,7 +245,10 @@
         },
         props: {
             dark_mode: Boolean
-        }    
+        },
+        created(){
+            this.getData()
+        }
     }
 </script>
 
@@ -240,6 +276,32 @@
         max-width: 5rem;
         min-width: 5rem;
         height: 5rem;
+    }
+
+    .card{
+        max-width: 600px;
+        min-width: 250px
+    }
+
+    .tech{
+        max-width: fit-content;
+        min-width: fit-content;
+    }
+
+    .tech:hover{
+        background-color: var(--accent-color);
+        color: white;
+        transition: .2s ease-in-out;
+    }
+
+    .card-img{
+        max-height: 250px;
+    }
+
+    .card:hover{
+        transform: scale(110%);
+        transition: .2s ease-in-out;
+        z-index: 1000;
     }
     @media screen and (max-width: 1035px) {
         .intro-title{
