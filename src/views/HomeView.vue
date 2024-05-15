@@ -174,8 +174,8 @@
             </div>
         </div>
     </div>
-    <!-- <ParticlesComponent v-if="visible">
-    </ParticlesComponent> -->
+    <ParticlesComponent v-if="visible">
+    </ParticlesComponent>
 </template>
 
 <script>
