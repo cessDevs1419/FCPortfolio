@@ -88,18 +88,18 @@
                     <div class=" d-flex justify-content-lg-start justify-content-center align-items-center m-auto mb-3">
                         <h5 class="fw-semibold  m-0 me-3" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Reach me out</h5>
                     </div>
-                    <form >
+                    <form @submit.prevent="submit">
                         <div class="mb-3">
                             <label class="form-label" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Email address</label>
-                            <input type="email" class="form-control bg-transparent" v-bind:class="[dark_mode ? 'text-white':'primary-font']">
+                            <input type="email" class="form-control bg-transparent" v-model="form.email" v-bind:class="[dark_mode ? 'text-white':'primary-font']">
                         </div>
                         <div class="mb-3">
                             <label  class="form-label" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Subject</label>
-                            <input type="text" class="form-control bg-transparent" v-bind:class="[dark_mode ? 'text-white':'primary-font']">
+                            <input type="text" class="form-control bg-transparent" v-model="form.subject" v-bind:class="[dark_mode ? 'text-white':'primary-font']">
                         </div>
                         <div class="mb-3">
                             <label class="form-label" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Message</label>
-                            <textarea class="form-control bg-transparent" rows="3" v-bind:class="[dark_mode ? 'text-white':'primary-font']"></textarea>
+                            <textarea class="form-control bg-transparent" rows="3" v-model="form.message" v-bind:class="[dark_mode ? 'text-white':'primary-font']"></textarea>
                         </div>
                         <button type="submit" class="btn w-100 btn-primary text-center d-flex justify-content-center align-items-center rounded-4 secondary-color px-3 px-2" @click="openResume">
                             Submit
@@ -129,7 +129,6 @@
     </div>
     <ParticlesComponent>
     </ParticlesComponent>
-    
 </template>
 
 <script>
@@ -163,15 +162,23 @@
                     reactLogo,
                     angularLogo,
                     vueLogo,
-                ]
+                ],
+                form: {
+                    email: '',
+                    subject: '',
+                    message: '',
+                }
             }
         },
         methods: {
             openResume(){
                 var link = document.createElement('a');
-                link.href = '../assets/File/Cillo_Francess_Resume.pdf'
+                link.href = '../../public/File/Cillo_Francess_Resume.pdf'
                 link.download = 'Cillo_Francess_Resume.pdf'; 
                 link.click();
+            },
+            async submit() {
+                this.$emit('submit', this.form)
             }
         },
         components:{

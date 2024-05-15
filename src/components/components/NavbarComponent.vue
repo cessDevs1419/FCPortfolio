@@ -1,6 +1,5 @@
 <template> 
-    <nav class="navbar navbar-expand-lg position-fixed w-100 z-nav" v-bind:class="[dark_mode ? 'background-dark ':'background-white', dark_mode ? (isScrolled ? 'primary-color box-shadow' : 'bg-transparent') : (isScrolled ? 'bg-white box-shadow' : 'bg-transparent')
-    ]"  >
+    <nav class="navbar navbar-expand-lg position-fixed w-100 z-nav" v-bind:class="[dark_mode ? 'background-dark ':'background-white', dark_mode ? (isScrolled ? 'primary-color box-shadow' : 'bg-transparent') : (isScrolled ? 'bg-white box-shadow' : 'bg-transparent')]"  >
         <div class="navbar-container container-fluid d-flex justify-content-between " >
             <h1 class="navbar-brand fs-2 fw-bold z-ult" v-bind:class="[dark_mode ? 'text-white':'primary-font']" href="#">F<span class="secondary-font fw-bold">C</span></h1>
             <button class="navbar-toggler z-ult" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
