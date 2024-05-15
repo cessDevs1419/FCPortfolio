@@ -39,10 +39,10 @@
                     <h5 class="fw-semibold intro-title m-0 me-3" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Im A</h5>
                     <h5 class="fw-semibold intro-title m-0" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Front End Developer</h5>
                 </div>
-                <button class="btn btn-primary d-flex justify-content-between align-items-center rounded-4 secondary-color px-3 px-2" @click="openResume">
+                <!-- <button class="btn btn-primary d-flex justify-content-between align-items-center rounded-4 secondary-color px-3 px-2" @click="openResume">
                     <span class="me-3">Download Resume</span>
                     <i class="bi bi-download fs-5 text-white"></i>
-                </button>
+                </button> -->
     
             </div>
         </div>
@@ -101,7 +101,7 @@
                             <label class="form-label" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Message</label>
                             <textarea class="form-control bg-transparent" rows="3" v-model="form.message" v-bind:class="[dark_mode ? 'text-white':'primary-font']"></textarea>
                         </div>
-                        <button type="submit" class="btn w-100 btn-primary text-center d-flex justify-content-center align-items-center rounded-4 secondary-color px-3 px-2" @click="openResume">
+                        <button type="submit" class="btn w-100 btn-primary text-center d-flex justify-content-center align-items-center rounded-4 secondary-color px-3 px-2" >
                             Submit
                         </button>
                     </form>
@@ -178,7 +178,7 @@
                 link.click();
             },
             async submit() {
-                this.$emit('submit', this.form)
+                console.log('submit', this.form)
             }
         },
         components:{

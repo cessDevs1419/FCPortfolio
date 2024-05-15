@@ -2,6 +2,7 @@
   import { RouterLink, RouterView } from 'vue-router'
   import NavbarComponent from './components/components/NavbarComponent.vue';
   import HomeView from './views/HomeView.vue';
+  import Footer from './components/components/FooterComponent.vue'
 </script>
 
 <script>
@@ -27,6 +28,7 @@
     :dark_mode="mode"
   >
   </HomeView>
+  <Footer></Footer>
 </template>
 
 
