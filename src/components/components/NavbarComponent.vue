@@ -1,5 +1,6 @@
-<template>
-    <nav class="navbar navbar-expand-lg position-fixed w-100 z-ult" :class="{ ' box-shadow': isScrolled }" >
+<template> 
+    <nav class="navbar navbar-expand-lg position-fixed w-100 z-nav" v-bind:class="[dark_mode ? 'background-dark ':'background-white', dark_mode ? (isScrolled ? 'primary-color box-shadow' : 'bg-transparent') : (isScrolled ? 'bg-white box-shadow' : 'bg-transparent')
+    ]"  >
         <div class="navbar-container container-fluid d-flex justify-content-between " >
             <h1 class="navbar-brand fs-2 fw-bold z-ult" v-bind:class="[dark_mode ? 'text-white':'primary-font']" href="#">F<span class="secondary-font fw-bold">C</span></h1>
             <button class="navbar-toggler z-ult" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,9 +11,9 @@
                     <div class="w-100 d-flex justify-content-start justify-content-lg-center">
                         <div class="navbar-nav z-ult">
                             <a class="nav-link fw-semibold m-0 cursor-pointer" v-bind:class="[dark_mode ? 'text-white':'primary-font']" href="#home" >Home</a>
-                            <a class="nav-link fw-semibold m-0 cursor-pointer" v-bind:class="[dark_mode ? 'text-white':'primary-font']" href="#About" >About</a>
-                            <a class="nav-link fw-semibold m-0 cursor-pointer" v-bind:class="[dark_mode ? 'text-white':'primary-font']" href="#Projects" >Project</a>
-                            <a class="nav-link fw-semibold m-0 cursor-pointer" v-bind:class="[dark_mode ? 'text-white':'primary-font']" href="#Contact" >Contact</a>
+                            <a class="nav-link fw-semibold m-0 cursor-pointer" v-bind:class="[dark_mode ? 'text-white':'primary-font']" href="#about" >About</a>
+                            <a class="nav-link fw-semibold m-0 cursor-pointer" v-bind:class="[dark_mode ? 'text-white':'primary-font']" href="#projects" >Projects</a>
+                            <a class="nav-link fw-semibold m-0 cursor-pointer" v-bind:class="[dark_mode ? 'text-white':'primary-font']" href="#contact" >Contact</a>
                         </div>
                     </div>
                     <ToggleMode
@@ -37,10 +38,16 @@
             return{
                 dark_mode: false,
                 isScrolled: false,
+                navmode: ''
             }
         },
         mounted() {
             window.addEventListener('scroll', this.handleScroll);
+            if (this.isScrolled) {
+                this.navmode = this.dark_mode ? 'dark' : 'light';
+            } else {
+                this.navmode = 'transparent';
+            }
         },
         destroyed() {
             window.removeEventListener('scroll', this.handleScroll);
@@ -66,9 +73,19 @@
         min-width: 15px;
         height: 15px;
     }
-    .navbar-container {
+    .navbar {
         transition: .3s ease-in-out;
-        z-index: 20000;
     }
 
+    @media screen and (max-width: 992px) {
+        .navbar{
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+        .background-white{
+            background-color: white;
+        }
+        .background-dark{
+            background-color: var(--primary-color);
+        }
+    }
 </style>

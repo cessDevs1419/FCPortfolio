@@ -1,52 +1,171 @@
 <template>
-    <div class="hero d-flex align-items-center flex-lg-row flex-column  justify-content-around w-100 primary-color" v-bind:class="[dark_mode ? 'primary-color':'bg-white']">
-        <div class="socmed z-ult h-100 w-25 ">
-            <div class="socmed-border ms-5 rounded-5 border px-2 secondary-color"></div>
-            <!-- <GithubIcon
-                :mode="dark_mode"
-                height: 40,
-                width: 40
-            ></GithubIcon> -->
-            <svg width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M49.7901 7.00405C49.5008 6.30589 48.9424 5.77173 48.2557 5.53639L48.2507 5.53471L48.2459 5.53303L48.2357 5.52965L48.2147 5.52271L48.1696 5.50855C48.1381 5.49895 48.104 5.48917 48.0672 5.47933C47.9936 5.45965 47.9093 5.43986 47.8147 5.42151C47.6248 5.38477 47.3941 5.35399 47.1221 5.34045C46.576 5.31325 45.8765 5.35589 45.0179 5.54778C43.5859 5.86775 41.7269 6.59871 39.3931 8.0965C39.2405 8.19439 39.0859 8.29557 38.9293 8.4001C38.7725 8.3613 38.6157 8.32381 38.4587 8.28767C34.2029 7.30855 29.7979 7.30855 25.542 8.28767C25.3849 8.32383 25.228 8.3613 25.0713 8.40013C24.9146 8.29557 24.76 8.19439 24.6073 8.0965C22.271 6.59794 20.4078 5.86711 18.9721 5.54738C18.1114 5.35573 17.4104 5.31333 16.864 5.34042C16.5916 5.35391 16.361 5.3845 16.1714 5.42098C16.0768 5.43919 15.9929 5.45879 15.9196 5.47826C15.8829 5.48799 15.849 5.4977 15.8177 5.50717L15.7728 5.52117L15.752 5.52797L15.7419 5.53133L15.7369 5.53298L15.7321 5.53463C15.0394 5.77026 14.4767 6.30962 14.188 7.01463C13.1124 9.64074 12.8269 12.5366 13.3449 15.3145C13.3701 15.4495 13.3972 15.5842 13.4261 15.7186C13.3151 15.8763 13.2072 16.0362 13.1025 16.198C11.4872 18.6954 10.6281 21.6741 10.6684 24.7328C10.6722 31.2837 12.5857 35.7701 15.8219 38.657C17.6537 40.2911 19.7798 41.2914 21.9166 41.9218C22.1611 41.9941 22.4058 42.0613 22.6502 42.1242C22.6145 42.2482 22.5812 42.3733 22.5504 42.4991C22.4211 43.0282 22.3353 43.5714 22.2956 44.1226C22.292 44.1725 22.2897 44.2223 22.2888 44.2722L22.1983 49.1223L22.1978 49.1749C22.1978 49.1901 22.1978 49.2053 22.1978 49.2202C22.0337 49.261 21.8668 49.2911 21.6982 49.3106C21.1787 49.3706 20.6525 49.3269 20.1496 49.1821C19.6467 49.0373 19.1767 48.7941 18.7667 48.4661C18.3567 48.1381 18.0148 47.7314 17.7608 47.2693L17.7347 47.2229C17.0356 46.009 16.0701 44.9701 14.9105 44.185C13.7508 43.3997 12.4277 42.8893 11.0413 42.6927C9.58308 42.4861 8.23342 43.5005 8.02673 44.9589C7.82004 46.417 8.83457 47.7666 10.2928 47.9733C10.8751 48.0559 11.4317 48.2703 11.9203 48.6013C12.4032 48.9282 12.8074 49.3605 13.1024 49.8663C13.6923 50.9309 14.4844 51.8701 15.4347 52.6303C16.3934 53.3975 17.4942 53.9674 18.6739 54.3071C19.8226 54.6378 21.0238 54.7439 22.212 54.6197C22.2144 55.2594 22.2161 55.7503 22.2161 55.9997C22.2161 57.4725 23.3472 58.6663 24.7426 58.6663H39.3488C40.744 58.6663 41.8752 57.4725 41.8752 55.9997V45.8917C41.944 44.7469 41.8267 43.5994 41.5301 42.4991C41.4893 42.3477 41.4451 42.197 41.3976 42.0474C41.5568 42.0077 41.716 41.9658 41.8752 41.9218C44.0739 41.3162 46.2701 40.3261 48.1568 38.6618C51.4109 35.7909 53.3285 31.3007 53.3323 24.7328C53.3725 21.6741 52.5133 18.6954 50.8981 16.198C50.7933 16.0359 50.6853 15.8758 50.5739 15.7178C50.6027 15.5836 50.6296 15.4492 50.6547 15.3145C51.1715 12.5312 50.8787 9.63013 49.7901 7.00405Z" fill="#3AB0FF"/>
-            </svg>
-        </div>
-        <div class="title-container z-ult w-100 d-flex flex-column align-items-center justify-content-center">
-            <div class="intro-title d-flex m-auto">
-                <h5 class="fw-semibold intro-title  m-0 me-3" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Hello There</h5>
-                <ShakingHands
-                    :height="43"
-                    :width="43"
-                ></ShakingHands>
+    <div id="home" class="full-height w-100 d-flex align-items-center primary-color" v-bind:class="[dark_mode ? 'primary-color':'bg-white']">
+        <div class="container-lg h-100 d-flex pt-5 align-items-center flex-lg-row flex-column ">
+            <div class="socmed z-ult h-100">
+                <div class="d-flex flex-lg-column mb-lg-0 mb-3 w-auto align-items-center justify-content-center">
+                    <div class="socmed-border d-lg-flex d-none mb-3 rounded-5  px-2 secondary-color"></div>
+                    <GithubIcon 
+                        class="mb-lg-3 mb-0 mx-2"
+                        :mode="dark_mode"
+                        :height="40" 
+                        :width="40" 
+                    ></GithubIcon>
+                    <LinkedIcon
+                        class="mb-lg-3 mb-0 mx-2"
+                        :mode="dark_mode"
+                        :height="30" 
+                        :width="30" 
+                    ></LinkedIcon>
+                    <TelegramIcon
+                        class="mb-lg-3 mb-0 mx-2"
+                        :mode="dark_mode"
+                        :height="40" 
+                        :width="40" 
+                    ></TelegramIcon>
+                </div>
             </div>
-
-            <h1 class="fw-bold title text-center" v-bind:class="[dark_mode ? 'text-white':'primary-font']" >Francess <span class="secondary-font fw-bold text-center">Cillo</span></h1>
-            
-            <div class="changing-roles d-flex m-auto mb-5">
-                <h5 class="fw-semibold intro-title m-0 me-3" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Im A</h5>
-                <h5 class="fw-semibold intro-title m-0" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Front End Developer</h5>
+            <div class="title-container me-lg-5 me-0 z-ult w-100 d-flex flex-column align-items-center justify-content-center">
+                <div class="intro-title d-flex align-items-center m-auto">
+                    <h5 class="fw-semibold intro-title  m-0 me-3" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Hello, I'am</h5>
+                    <ShakingHands
+                        :height="43"
+                        :width="43"
+                    ></ShakingHands>
+                </div>
+    
+                <h1 class="fw-bold title text-center" v-bind:class="[dark_mode ? 'text-white':'primary-font']" >Francess <span class="secondary-font fw-bold text-center">Cillo</span></h1>
+                
+                <div class="changing-roles d-flex m-auto mb-5">
+                    <h5 class="fw-semibold intro-title m-0 me-3" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Im A</h5>
+                    <h5 class="fw-semibold intro-title m-0" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Front End Developer</h5>
+                </div>
+                <button class="btn btn-primary d-flex justify-content-between align-items-center rounded-4 secondary-color px-3 px-2" @click="openResume">
+                    <span class="me-3">Download Resume</span>
+                    <i class="bi bi-download fs-5 text-white"></i>
+                </button>
+    
             </div>
-            <button class="btn btn-primary d-flex justify-content-between align-items-center rounded-4 secondary-color px-3 px-2" @click="openResume">
-                <span class="me-3">Download Resume</span>
-                <i class="bi bi-download fs-5 text-white"></i>
-            </button>
-
         </div>
-        <div class="chatbox h-100 w-25">
-
+    </div>
+    <div id="about" class="full-height w-100 d-flex align-items-center primary-color" v-bind:class="[dark_mode ? 'primary-color':'bg-white']">
+        <div class="container-lg ">
+            <div class="row d-flex align-items-center w-100 m-auto">
+                <div class="col-lg-5 d-lg-flex d-none">
+                    <img class=" w-100 h-100" src="../assets/avatar1.png" alt="">
+                </div>
+                <div class="col-lg-7 h-100 z-ult text-lg-start text-center">
+                    <h1 class="fw-bold about-title  mb-0" v-bind:class="[dark_mode ? 'text-white':'primary-font']" >About <span class="secondary-font fw-bold text-center">Me</span></h1>
+                    <div class=" d-flex justify-content-lg-start justify-content-center align-items-center m-auto mb-3">
+                        <h5 class="fw-semibold  m-0 me-3" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Get to know me</h5>
+                    </div>
+                    <p class="mb-5" v-bind:class="[dark_mode ? 'text-white':'primary-font']">
+                        I graduated with a BSIT degree and have spent two years creating websites that adapt to different devices. I thrive in team settings and follow agile practices well. Integrating APIs and crafting front-end projects with Angular, React, and Vue.js are among my strengths. Currently, I'm diving into backend development using Laravel and Inertia to expand my expertise
+                    </p>
+                    <div class="technologies">
+                        <div class=" d-flex justify-content-lg-start justify-content-center align-items-center m-auto mb-3">
+                            <h5 class="fw-semibold  m-0 me-3" v-bind:class="[dark_mode ? 'text-white':'primary-font']"><span class="secondary-font fw-bold text-center">Technologies</span> I use</h5>
+                        </div>
+                        <div class="row d-flex justify-content-lg-start justify-content-center w-100 m-auto px-0">
+                            <div class="col-auto px-0 " v-for="(logo, index) in technologies" :key="index">
+                                <img class="img-icon " :src="logo" alt="">
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="projects" class="full-height w-100 d-flex align-items-center primary-color" v-bind:class="[dark_mode ? 'primary-color':'bg-white']">
+    </div>
+    <div id="contact" class="full-height w-100 d-flex align-items-center primary-color" v-bind:class="[dark_mode ? 'primary-color':'bg-white']">
+        <div class="container-lg ">
+            <div class="row d-flex align-items-center w-100 m-auto">
+                <div class="col-lg-5 d-lg-flex d-none">
+                    <img class=" w-100 h-100" src="../assets/avatar2.png" alt="">
+                </div>
+                <div class="col-lg-7 h-100 z-ult text-lg-start text-center">
+                    <h1 class="fw-bold about-title  mb-0" v-bind:class="[dark_mode ? 'text-white':'primary-font']" >Contact <span class="secondary-font fw-bold text-center">Me</span></h1>
+                    <div class=" d-flex justify-content-lg-start justify-content-center align-items-center m-auto mb-3">
+                        <h5 class="fw-semibold  m-0 me-3" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Reach me out</h5>
+                    </div>
+                    <form >
+                        <div class="mb-3">
+                            <label class="form-label" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Email address</label>
+                            <input type="email" class="form-control bg-transparent" v-bind:class="[dark_mode ? 'text-white':'primary-font']">
+                        </div>
+                        <div class="mb-3">
+                            <label  class="form-label" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Subject</label>
+                            <input type="text" class="form-control bg-transparent" v-bind:class="[dark_mode ? 'text-white':'primary-font']">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Message</label>
+                            <textarea class="form-control bg-transparent" rows="3" v-bind:class="[dark_mode ? 'text-white':'primary-font']"></textarea>
+                        </div>
+                        <button type="submit" class="btn w-100 btn-primary text-center d-flex justify-content-center align-items-center rounded-4 secondary-color px-3 px-2" @click="openResume">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="thanks full-height w-100 d-flex align-items-center primary-color" v-bind:class="[dark_mode ? 'primary-color':'bg-white']">
+        <div class="container-md">
+            <div class="title-container me-lg-5 me-0 z-ult w-100 d-flex flex-column align-items-center justify-content-center">
+                <div class="intro-title d-flex align-items-center m-auto">
+                    <ShakingHands
+                        :height="43"
+                        :width="43"
+                    ></ShakingHands>
+                </div>
+    
+                <h1 class="fw-bold title text-center" v-bind:class="[dark_mode ? 'text-white':'primary-font']" >Thank <span class="secondary-font fw-bold text-center">You</span></h1>
+                
+                <div class="changing-roles text-center d-flex m-auto mb-5">
+                    <h5 class="fw-semibold intro-title m-0 me-3" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Thank you for taking an interest in my portfolio. Let's collaborate and build something incredible together!</h5>
+                </div>
+            </div>
         </div>
     </div>
     <ParticlesComponent>
     </ParticlesComponent>
-
+    
 </template>
 
 <script>
     import ShakingHands from '../components/icons/ShakingHands.vue'
     import ParticlesComponent from '../components/components/ParticlesComponent.vue'
     import GithubIcon from '../components/icons/GithubIcon.vue'
+    import LinkedIcon from '@/components/icons/LinkedIcon.vue'
+    import TelegramIcon from '@/components/icons/TelegramIcon.vue'
 
+    import htmlLogo from '../assets/technologies/html.png';
+    import cssLogo from '../assets/technologies/css.png';
+    import jsLogo from '../assets/technologies/javascript.png';
+    import tsLogo from '../assets/technologies/typescript.png';
+    import vscodeLogo from '../assets/technologies/visual-studio-code.png';
+    import githubLogo from '../assets/technologies/github.png';
+    import reactLogo from '../assets/technologies/react.png';
+    import angularLogo from '../assets/technologies/angularjs.png';
+    import vueLogo from '../assets/technologies/vue.png';
+    
+    
     export default {
+        data () {
+            return {
+                technologies: [
+                    htmlLogo,
+                    cssLogo,
+                    jsLogo,
+                    tsLogo,
+                    vscodeLogo,
+                    githubLogo,
+                    reactLogo,
+                    angularLogo,
+                    vueLogo,
+                ]
+            }
+        },
         methods: {
             openResume(){
                 var link = document.createElement('a');
@@ -59,6 +178,8 @@
             ShakingHands,
             ParticlesComponent,
             GithubIcon,
+            LinkedIcon,
+            TelegramIcon
         },
         props: {
             dark_mode: Boolean
@@ -67,8 +188,10 @@
 </script>
 
 <style>
-    .hero{
+
+    .full-height{
         min-height: 100vh;
+        scroll-snap-align: start;
     }
 
     .socmed-border{
@@ -80,5 +203,21 @@
     }
     .title{
         font-size: 6rem;
+    }
+    .about-title{
+        font-size: 4rem;
+    }
+    .img-icon{
+        max-width: 5rem;
+        min-width: 5rem;
+        height: 5rem;
+    }
+    @media screen and (max-width: 1035px) {
+        .intro-title{
+            font-size: 1.5rem;
+        }
+        .title{
+            font-size: 4rem;
+        }
     }
 </style>

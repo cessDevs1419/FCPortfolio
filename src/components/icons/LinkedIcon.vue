@@ -1,0 +1,23 @@
+<template>
+    <a href="https://www.linkedin.com/in/francess-cillo-177b8a29a/" class="rounded-circle d-flex justify-content-center align-items-center socmed-icons" v-bind:class="[mode ? 'bg-white':'primary-color']">
+        <svg :width="width" :height="height" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_276_2)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M64 61.091H49.8551V40.6377C49.8551 35.2841 47.6426 31.6294 42.7771 31.6294C39.0555 31.6294 36.9859 34.0957 36.0226 36.4726C35.6613 37.3258 35.7178 38.5142 35.7178 39.7026V61.091H21.7046C21.7046 61.091 21.8853 24.8601 21.7046 21.5667H35.7178V27.7698C36.5456 25.0576 41.0235 21.1867 48.1693 21.1867C57.0348 21.1867 64 26.8719 64 39.114V61.091ZM7.53338 16.6229H7.44309C2.92757 16.6229 0 13.6015 0 9.77162C0 5.86725 3.01411 2.90918 7.61994 2.90918C12.222 2.90918 15.0517 5.85983 15.142 9.76048C15.142 13.5903 12.222 16.6229 7.53338 16.6229ZM1.61426 21.5667H14.0884V61.091H1.61426V21.5667Z" fill="#3AB0FF"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_276_2">
+            <rect width="64" height="64" fill="white"/>
+            </clipPath>
+            </defs>
+        </svg>
+    </a>
+</template>
+<script>
+    export default{
+        props: {
+            mode: Boolean,
+            height: Number,
+            width: Number
+        }
+    }
+</script>
