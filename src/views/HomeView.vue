@@ -59,7 +59,7 @@
                         <h5 class="fw-semibold  m-0 me-3" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Get to know me</h5>
                     </div>
                     <p class="mb-5" v-bind:class="[dark_mode ? 'text-white':'primary-font']">
-                        I graduated with a BSIT degree and have spent two years creating websites that adapt to different devices. I thrive in team settings and follow agile practices well. Integrating APIs and crafting front-end projects with Angular, React, and Vue.js are among my strengths. Currently, I'm diving into backend development using Laravel and Inertia to expand my expertise
+                        I'm a BSIT student just waiting for graduation data and i have spent two years creating websites that adapt to different devices. I thrive in team settings and follow agile practices well. Integrating APIs and crafting front-end projects with Angular, React, and Vue.js are among my strengths. Currently, I'm diving into backend development using Laravel and Inertia to expand my expertise
                     </p>
                     <div class="technologies">
                         <div class=" d-flex justify-content-lg-start justify-content-center align-items-center m-auto mb-3">
