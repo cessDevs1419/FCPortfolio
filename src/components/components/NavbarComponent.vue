@@ -42,11 +42,6 @@
         },
         mounted() {
             window.addEventListener('scroll', this.handleScroll);
-            if (this.isScrolled) {
-                this.navmode = this.dark_mode ? 'dark' : 'light';
-            } else {
-                this.navmode = 'transparent';
-            }
         },
         destroyed() {
             window.removeEventListener('scroll', this.handleScroll);

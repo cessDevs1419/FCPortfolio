@@ -35,9 +35,9 @@
     
                 <h1 class="fw-bold title text-center" v-bind:class="[dark_mode ? 'text-white':'primary-font']" >Francess <span class="secondary-font fw-bold text-center">Cillo</span></h1>
                 
-                <div class="changing-roles d-flex m-auto mb-5">
-                    <h5 class="fw-semibold intro-title m-0 me-3" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Im A</h5>
-                    <h5 class="fw-semibold intro-title m-0" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Front End Developer</h5>
+                <div class=" d-flex flex-column flex-md-row align-items-center justify-content-center m-auto mb-5">
+                    <h5 class="fw-semibold intro-title m-0 me-md-3 me-0 text-center" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Im A</h5>
+                    <h5 class="fw-semibold intro-title m-0 text-center" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Front End Developer</h5>
                 </div>
                 <!-- <button class="btn btn-primary d-flex justify-content-between align-items-center rounded-4 secondary-color px-3 px-2" @click="openResume">
                     <span class="me-3">Download Resume</span>
@@ -127,7 +127,7 @@
             </div>
         </div>
     </div>
-    <ParticlesComponent>
+    <ParticlesComponent v-if="visible">
     </ParticlesComponent>
 </template>
 
@@ -167,8 +167,26 @@
                     email: '',
                     subject: '',
                     message: '',
-                }
+                },
+                visible: window.innerWidth >= 340,
+                windowWidth: window.innerWidth
             }
+        },
+        watch: {
+            windowWidth(newWidth) {
+            this.visible = newWidth >= 340;
+            }
+        },
+        mounted() {
+            // Perform an initial check
+            this.handleResize();
+            
+            // Add event listener for window resize
+            window.addEventListener('resize', this.updateWindowWidth);
+        },
+        beforeUnmount() { // Use beforeUnmount if using Vue 3, otherwise use beforeDestroy for Vue 2
+            // Remove event listener
+            window.removeEventListener('resize', this.updateWindowWidth);
         },
         methods: {
             openResume(){
@@ -179,6 +197,10 @@
             },
             async submit() {
                 console.log('submit', this.form)
+            },
+            handleResize() {
+                this.windowWidth = window.innerWidth;
+                this.visible = this.windowWidth >= 340;
             }
         },
         components:{
@@ -225,6 +247,17 @@
         }
         .title{
             font-size: 4rem;
+        }
+    }
+    @media screen and (max-width: 340px) {
+        .about-title{
+            font-size: 2rem;
+        }
+        .intro-title{
+            font-size: 1rem;
+        }
+        .title{
+            font-size: 3rem;
         }
     }
 </style>
