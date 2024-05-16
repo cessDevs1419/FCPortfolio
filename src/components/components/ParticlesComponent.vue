@@ -17,7 +17,7 @@
         },
         particles: {
             number: {
-                value: 30
+                value: 15
             },
             color: {
                 value: "#9FD9FF"

@@ -158,7 +158,7 @@
     </div> -->
     <div class="thanks full-height w-100 d-flex align-items-center primary-color" v-bind:class="[dark_mode ? 'primary-color':'bg-white']">
         <div class="container-md">
-            <div class="title-container me-lg-5 me-0 z-ult w-100 d-flex flex-column align-items-center justify-content-center">
+            <div class="title-container  me-lg-5 me-0 z-ult w-100 d-flex flex-column align-items-center justify-content-center">
                 <div class="intro-title d-flex align-items-center m-auto">
                     <ShakingHands
                         :height="43"
@@ -166,9 +166,9 @@
                     ></ShakingHands>
                 </div>
     
-                <h1 class="fw-bold title text-center" v-bind:class="[dark_mode ? 'text-white':'primary-font']" >Thank <span class="secondary-font fw-bold text-center">You</span></h1>
+                <h1 class="fw-bold title text-center z-ult" v-bind:class="[dark_mode ? 'text-white':'primary-font']" >Thank <span class="secondary-font fw-bold text-center">You</span></h1>
                 
-                <div class="changing-roles text-center d-flex m-auto mb-5">
+                <div class="changing-roles text-center d-flex m-auto mb-5 z-ult">
                     <h5 class="fw-semibold intro-title m-0 me-3" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Thank you for taking an interest in my portfolio. Let's collaborate and build something incredible together!</h5>
                 </div>
             </div>
