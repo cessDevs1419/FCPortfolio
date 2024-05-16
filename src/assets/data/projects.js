@@ -30,6 +30,7 @@ const Projects = [
             'Angular',
             'Type Script',
             'Html',
+            'Bootstrap',
             'Css',
             'API'
         ]
@@ -46,6 +47,7 @@ const Projects = [
         technologies: [
             'Laravel Blade',
             'Php',
+            'Bootstrap',
             'JavaScript',
             'Html',
             'Css',
@@ -64,6 +66,7 @@ const Projects = [
         technologies: [
             'JavaScript',
             'Html',
+            'Bootstrap',
             'Css',
             'API'
         ]
@@ -82,6 +85,7 @@ const Projects = [
             'Vue',
             'JavaScript',
             'Html',
+            'Bootstrap',
             'Css',
             'API'
         ]
@@ -101,8 +105,8 @@ const Projects = [
         ]
     },
     {
-        name: 'Sweeper',
-        description: 'Sweepers is an online platform designed for displaying their selling accounts. Sellers can showcase their items on this website by linking to an external API from another ecommerce platform.',
+        name: 'Swypers Paradise',
+        description: 'Swypers is an online platform designed for displaying their selling accounts. Sellers can showcase their items on this website by linking to an external API from another ecommerce platform.',
         type: 'Client',
         images: [
             sweeper
