@@ -45,8 +45,7 @@ const Projects = [
             apexpack
         ],
         technologies: [
-            'Laravel Blade',
-            'Php',
+            'Laravel',
             'Bootstrap',
             'JavaScript',
             'Html',
