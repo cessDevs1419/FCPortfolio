@@ -3,7 +3,7 @@
         <div class="container-lg h-100 d-flex pt-5 align-items-center flex-lg-row flex-column ">
             <div class="socmed z-ult h-100">
                 <div class="d-flex flex-lg-column mb-lg-0 mb-3 w-auto align-items-center justify-content-center">
-                    <div class="socmed-border d-lg-flex d-none mb-3 rounded-5  px-2 secondary-color"></div>
+                    <div data-aos="fade-down" class="socmed-border d-lg-flex d-none mb-3 rounded-5  px-2 secondary-color"></div>
                     <GithubIcon 
                         class="mb-lg-3 mb-0 mx-2"
                         :mode="dark_mode"
@@ -32,9 +32,10 @@
                         :width="43"
                     ></ShakingHands>
                 </div>
-    
-                <h1 class="fw-bold title text-center" v-bind:class="[dark_mode ? 'text-white':'primary-font']" >Francess <span class="secondary-font fw-bold text-center">Cillo</span></h1>
-                
+                <div v-bind:class="[dark_mode ? 'text-white':'primary-font']"  class="d-flex flex-wrap justify-content-center align-items-center m-auto">
+                    <h1 data-aos="fade-right" class="fw-bold title text-center me-sm-2 me-0" >Francess</h1>
+                    <h1 data-aos="fade-left" class="secondary-font title  fw-bold text-center" >Cillo</h1>
+                </div>
                 <div class=" d-flex flex-column flex-md-row align-items-center justify-content-center m-auto mb-5">
                     <h5 class="fw-semibold intro-title m-0 me-md-3 me-0 text-center" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Im a</h5>
                     <h5 class="fw-semibold intro-title m-0 text-center d-flex align-items-center p-0 " v-bind:class="[dark_mode ? 'text-white':'primary-font']">
@@ -56,25 +57,26 @@
     <div id="about" class="full-height w-100 d-flex align-items-center primary-color" v-bind:class="[dark_mode ? 'primary-color':'bg-white']">
         <div class="container-lg ">
             <div class="row d-flex align-items-center w-100 m-auto">
-                <div class="col-lg-5 d-lg-flex d-none">
-                    <img class=" w-100 h-100" src="../assets/avatar1.png" alt="">
+                <div data-aos="zoom-in-right" class="col-lg-5 d-lg-flex d-none">
+                    <img  class=" w-100 h-100" src="../assets/avatar1.png" alt="">
                 </div>
-                <div class="col-lg-7 h-100 z-ult text-lg-start text-center">
-                    <h1 class="fw-bold about-title  mb-0" v-bind:class="[dark_mode ? 'text-white':'primary-font']" >About <span class="secondary-font fw-bold text-center">Me</span></h1>
-                    <div class=" d-flex justify-content-lg-start justify-content-center align-items-center m-auto mb-3">
-                        <h5 class="fw-semibold  m-0 me-3" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Get to know me</h5>
+                <div  class="col-lg-7 h-100 z-ult text-lg-start text-center" v-bind:class="[dark_mode ? 'text-white':'primary-font']">
+                    <h1 data-aos="fade-right" class="fw-bold about-title  mb-0" >About <span class="secondary-font fw-bold text-center">Me</span></h1>
+                    <div data-aos="fade-right" data-aos-duration="500" class=" d-flex justify-content-lg-start justify-content-center align-items-center m-auto mb-3">
+                        <h5 class="fw-semibold  m-0 me-3" >Get to know me</h5>
                     </div>
-                    <p class="mb-5" v-bind:class="[dark_mode ? 'text-white':'primary-font']">
+                    <p data-aos="zoom-in-up" class="mb-5" >
                         I'm a BSIT student just waiting for graduation date and i have spent two years creating websites that adapt to different devices. I thrive in team settings and follow agile practices well. Integrating APIs and crafting front-end projects with Angular, React, and Vue.js are among my strengths. Currently, I'm diving into backend development using Laravel and Inertia to expand my expertise
                     </p>
                     <div class="technologies">
-                        <div class=" d-flex justify-content-lg-start justify-content-center align-items-center m-auto mb-3">
+                        <div data-aos="fade-right" class="d-flex justify-content-lg-start justify-content-center align-items-center m-auto mb-3">
                             <h5 class="fw-semibold  m-0 me-3" v-bind:class="[dark_mode ? 'text-white':'primary-font']"><span class="secondary-font fw-bold text-center">Technologies</span> I use</h5>
                         </div>
+                        
                         <div class="row d-flex justify-content-lg-start justify-content-center w-100 m-auto px-0">
-                            <div class="col-auto px-0 " v-for="(logo, index) in technologies" :key="index">
+                            <div data-aos="zoom-in" class="col-auto px-0 " v-for="(logo, index) in technologies" :key="index">
                                 <img class="img-icon " :src="logo" alt="">
-                              </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -82,10 +84,10 @@
         </div>
     </div>
     <div id="projects" class="full-height w-100 d-flex align-items-center primary-color" v-bind:class="[dark_mode ? 'primary-color':'bg-white']">
-        <div class="container-md">
-            <h1 class="fw-bold about-title text-center mb-5" v-bind:class="[dark_mode ? 'text-white':'primary-font']" >My <span class="secondary-font fw-bold text-center">Projects</span></h1>
-            <div class="row w-100 h-100 m-auto ">
-                 <div class="col-auto m-auto mb-3 z-ult" v-for="(project, index) in projects" :key="index">
+        <div class="container-md pt-5">
+            <h1 data-aos="fade-up" class="fw-bold about-title text-center mb-5 mt-5" v-bind:class="[dark_mode ? 'text-white':'primary-font']" >My <span class="secondary-font fw-bold text-center">Projects</span></h1>
+            <div class="row w-100 h-100 m-auto mt-5">
+                 <div data-aos="zoom-in"  class="col-auto m-auto mb-3 z-ult" v-for="(project, index) in projects" :key="index">
                     <div class="card border-0 box-shadow overflow-hidden border" v-bind:class="[dark_mode ? 'primary-color':'bg-white']">
                         <div class="row flex-column w-100 m-auto px0">
                             <div class="col-auto pt-3 d-flex align-items-center">
@@ -172,10 +174,13 @@
                     ></ShakingHands>
                 </div>
     
-                <h1 class="fw-bold title text-center z-ult" v-bind:class="[dark_mode ? 'text-white':'primary-font']" >Thank <span class="secondary-font fw-bold text-center">You</span></h1>
                 
-                <div class="changing-roles text-center d-flex m-auto mb-5 z-ult">
-                    <h5 class="fw-semibold intro-title m-0 me-3" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Thank you for taking an interest in my portfolio. Let's collaborate and build something incredible together!</h5>
+                <div class="d-flex flex-wrap justify-content-center align-items-center m-auto" v-bind:class="[dark_mode ? 'text-white':'primary-font']">
+                    <h1 data-aos="fade-right"  class="fw-bold title text-center me-sm-2 me-0" >Thank</h1>
+                    <h1 data-aos="fade-left"  class="secondary-font title  fw-bold text-center" >You</h1>
+                </div>
+                <div class="changing-roles text-center d-flex m-auto mb-5 z-ult" v-bind:class="[dark_mode ? 'text-white':'primary-font']" >
+                    <h5 data-aos="fade-up"  class="fw-semibold intro-title m-0 me-3" >Thank you for taking an interest in my portfolio. Let's collaborate and build something incredible together!</h5>
                 </div>
             </div>
         </div>
@@ -193,6 +198,7 @@
 
     import Technologies from '@/assets/data/technologies.js'
     import Projects from '@/assets/data/projects.js'
+    import AOS from 'aos';
 
     export default {
         data () {
@@ -217,16 +223,17 @@
         },
         watch: {
             windowWidth(newWidth) {
-            this.visible = newWidth >= 340;
-            }
+                this.visible = newWidth >= 340;
+            },
+
         },
         mounted() {
             this.handleResize();
             this.typewriterEffect();
             window.addEventListener('resize', this.updateWindowWidth);
+            AOS.init();
         },
-        beforeUnmount() { // Use beforeUnmount if using Vue 3, otherwise use beforeDestroy for Vue 2
-            // Remove event listener
+        beforeUnmount() { 
             window.removeEventListener('resize', this.updateWindowWidth);
         },
         methods: {
@@ -292,6 +299,7 @@
             LinkedIcon,
             TelegramIcon
         },
+        
         props: {
             dark_mode: Boolean
         },
@@ -345,11 +353,14 @@
 
     .card-img{
         max-height: 250px;
+        
     }
-
+    .card{
+        transition: .2s ease-out;
+    }
     .card:hover{
         transform: scale(110%);
-        transition: .2s ease-in-out;
+        transition: .2s ease-in;
         z-index: 1000;
     }
     @media screen and (max-width: 1035px) {

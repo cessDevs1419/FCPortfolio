@@ -1,3 +1,5 @@
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -13,3 +15,5 @@ const app = createApp(App)
 app.use(router)
 
 app.mount('#app')
+
+AOS.init();
