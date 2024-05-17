@@ -52,3 +52,17 @@
     font-size: 1em;
     animation: blink-caret 1s linear infinite
 }
+.typewriter-text {
+    overflow: hidden; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+}
+.typewriter-text.-green {
+    color: var(--accent-color) ;
+}
+.typewriter-text.-yellow {
+    color: #E5DF51;
+}
+.typewriter-text.-red {
+    color: #CB5769 ;
+}

@@ -210,7 +210,7 @@
                 wordIndex: 0,
                 typewriterTimeout: 0,
                 words: ["Front End Developer", "UI/UX Designer", "QA Tester"],
-                wordColors: ["-green", "-yellow", "-blue"],
+                wordColors: ["-green", "-yellow", "-red"],
                 currentLoopText: "Front End Developer",
                 currentWordColor: "-green",
             }
