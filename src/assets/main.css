@@ -46,3 +46,9 @@
 .socmed-icons:hover{
     transform: scale(110%);
 }
+
+.-typewriter-cursor {
+    color: var(--accent-color);
+    font-size: 1em;
+    animation: blink-caret 1s linear infinite
+}

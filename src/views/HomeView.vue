@@ -36,8 +36,14 @@
                 <h1 class="fw-bold title text-center" v-bind:class="[dark_mode ? 'text-white':'primary-font']" >Francess <span class="secondary-font fw-bold text-center">Cillo</span></h1>
                 
                 <div class=" d-flex flex-column flex-md-row align-items-center justify-content-center m-auto mb-5">
-                    <h5 class="fw-semibold intro-title m-0 me-md-3 me-0 text-center" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Im A</h5>
-                    <h5 class="fw-semibold intro-title m-0 text-center" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Front End Developer</h5>
+                    <h5 class="fw-semibold intro-title m-0 me-md-3 me-0 text-center" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Im a</h5>
+                    <h5 class="fw-semibold intro-title m-0 text-center d-flex align-items-center p-0 " v-bind:class="[dark_mode ? 'text-white':'primary-font']">
+                        <span
+                            :class="'typewriter-text m-0 ' + currentWordColor"
+                            id="typewriterText"
+                        ></span>
+                        <span :class="'-typewriter-cursor m-0' + currentWordColor">|</span>
+                    </h5>
                 </div>
                 <!-- <button class="btn btn-primary d-flex justify-content-between align-items-center rounded-4 secondary-color px-3 px-2" @click="openResume">
                     <span class="me-3">Download Resume</span>
@@ -96,11 +102,11 @@
                                     </div>
                                     <template v-if="project.images.length > 1">
                                         <button class="carousel-control-prev" type="button" :data-bs-target="'#carouselExampleIndicators'+index" data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="carousel-control-prev-icon primary-color rounded-2" aria-hidden="true"></span>
                                             <span class="visually-hidden">Previous</span>
                                         </button>
                                         <button class="carousel-control-next" type="button" :data-bs-target="'#carouselExampleIndicators'+index" data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="carousel-control-next-icon primary-color rounded-2" aria-hidden="true"></span>
                                             <span class="visually-hidden">Next</span>
                                         </button>
                                     </template>
@@ -199,7 +205,14 @@
                 technologies: Technologies,
                 projects: Projects,
                 visible: window.innerWidth >= 340,
-                windowWidth: window.innerWidth
+                windowWidth: window.innerWidth,
+                sleepTime: 100,
+                wordIndex: 0,
+                typewriterTimeout: 0,
+                words: ["Front End Developer", "UI/UX Designer", "QA Tester"],
+                wordColors: ["-green", "-yellow", "-blue"],
+                currentLoopText: "Front End Developer",
+                currentWordColor: "-green",
             }
         },
         watch: {
@@ -208,10 +221,8 @@
             }
         },
         mounted() {
-            // Perform an initial check
             this.handleResize();
-            
-            // Add event listener for window resize
+            this.typewriterEffect();
             window.addEventListener('resize', this.updateWindowWidth);
         },
         beforeUnmount() { // Use beforeUnmount if using Vue 3, otherwise use beforeDestroy for Vue 2
@@ -234,6 +245,44 @@
             },
             getData(){
                 console.log(this.projects)
+            },
+            typewriterEffect: function () {
+                const el = document.getElementById("typewriterText");
+                if (!el) return;
+
+                clearTimeout(this.typewriterTimeout);
+                let currentLoopText = this.words[this.wordIndex];
+                let i = 0;
+                const typeNextCharacter = () => {
+                    if (i <= currentLoopText.length) {
+                        el.innerHTML = currentLoopText.substring(0, i);
+                        i++;
+                        this.typewriterTimeout = setTimeout(typeNextCharacter, this.sleepTime);
+                    } else {
+                        this.typewriterTimeout = setTimeout(this.eraseText, Math.max(5 * 1000, this.sleepTime * 5));
+                    }
+                };
+                this.typewriterTimeout = setTimeout(typeNextCharacter, 0);
+            },
+            eraseText: function () {
+                const el = document.getElementById("typewriterText");
+                if (!el) return;
+
+                let currentLoopText = this.words[this.wordIndex];
+
+                let i = currentLoopText.length;
+                const eraseNextCharacter = () => {
+                    if (i >= 0) {
+                        el.innerHTML = currentLoopText.substring(0, i);
+                        i--;
+                        this.typewriterTimeout = setTimeout(eraseNextCharacter, this.sleepTime);
+                        } else {
+                        this.wordIndex = (this.wordIndex + 1) % this.words.length;
+                        this.currentWordColor = this.wordColors[this.wordIndex];
+                        this.typewriterEffect();
+                    }
+                };
+                this.typewriterTimeout = setTimeout(eraseNextCharacter, 0);
             }
         },
         components:{

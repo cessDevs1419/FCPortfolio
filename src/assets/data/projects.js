@@ -14,6 +14,19 @@ import lappeed1 from '../projects/lappee -dashboard.png'
 import lappeed2 from '../projects/lappee -dashboard2.png'
 import lappeed3 from '../projects/lappee -dashboard3.png'
 import lappeed4 from '../projects/lappee -dashboard4.png'
+import wulanding from '../projects/wu_land.png'
+import wudash from '../projects/wu_dash.png'
+import wulogin from '../projects/wu_login.png'
+import wurev from '../projects/wu_rev.png'
+import wusales from '../projects/wu_sales.png'
+import wusdash from '../projects/wu_sdash.png'
+import wusrev from '../projects/wu_srev.png'
+import vmlogin from '../projects/vm_login.png'
+import vmcall from '../projects/vm_call.png'
+import vmcalendar from '../projects/vm_calendar.png'
+import vmmeeting from '../projects/vm_meeting.png'
+import vmsettings from '../projects/vm_settings.png'
+import vmtask from '../projects/vm_task.png'
 
 const Projects = [
     {
@@ -73,7 +86,7 @@ const Projects = [
     {
         name: 'Quezon Province Legislative Website',
         description: 'The Quezon Province Legislative Website streamlines government affairs with efficient document management and information systems for smoother governance.',
-        type: 'Client',
+        type: 'Internship Client',
         images: [
             legislativenews,
             legislativetable,
@@ -115,6 +128,28 @@ const Projects = [
             'Html',
             'Css',
             'API'
+        ]
+    },
+    {
+        name: 'whiteStrings University',
+        description: 'WhiteStrings University offers flexible online learning with real classes and instructors, empowering students to study at their own pace, anywhere.',
+        type: 'Internship Client',
+        images: [
+            wulanding,wudash,wulogin,wurev,wusales,wusdash,wusrev
+        ],
+        technologies: [
+            'Figma',
+        ]
+    },
+    {
+        name: 'whiteStrings Virtual Meeting',
+        description: 'WhiteStrings Virtual Meeting provides a comprehensive platform for seamless communication, collaboration and task management, that allows user to track their schedules',
+        type: 'Internship Client',
+        images: [
+            vmlogin,vmcall,vmcalendar,vmmeeting,vmsettings,vmtask
+        ],
+        technologies: [
+            'Figma',
         ]
     }
 ]
