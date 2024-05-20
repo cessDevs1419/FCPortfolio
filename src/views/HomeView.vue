@@ -132,18 +132,18 @@
             </div>
         </div>
     </div>
-    <!-- <div id="contact" class="full-height w-100 d-flex align-items-center primary-color" v-bind:class="[dark_mode ? 'primary-color':'bg-white']">
+    <div id="contact" class="full-height w-100 d-flex align-items-center primary-color" v-bind:class="[dark_mode ? 'primary-color':'bg-white']">
         <div class="container-lg ">
             <div class="row d-flex align-items-center w-100 m-auto">
                 <div class="col-lg-5 d-lg-flex d-none">
                     <img class=" w-100 h-100" src="../assets/avatar2.png" alt="">
                 </div>
-                <div class="col-lg-7 h-100 z-ult text-lg-start text-center">
+                <div class="col-lg-7 h-100 z-ult text-lg-start text-center pt-sm-0 pt-5">
                     <h1 class="fw-bold about-title  mb-0" v-bind:class="[dark_mode ? 'text-white':'primary-font']" >Contact <span class="secondary-font fw-bold text-center">Me</span></h1>
                     <div class=" d-flex justify-content-lg-start justify-content-center align-items-center m-auto mb-3">
                         <h5 class="fw-semibold  m-0 me-3" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Reach me out</h5>
                     </div>
-                    <form @submit.prevent="submit">
+                    <!-- <form @submit.prevent="submit">
                         <div class="mb-3">
                             <label class="form-label" v-bind:class="[dark_mode ? 'text-white':'primary-font']">Email address</label>
                             <input type="email" class="form-control bg-transparent" v-model="form.email" v-bind:class="[dark_mode ? 'text-white':'primary-font']">
@@ -159,11 +159,70 @@
                         <button type="submit" class="btn w-100 btn-primary text-center d-flex justify-content-center align-items-center rounded-4 secondary-color px-3 px-2" >
                             Submit
                         </button>
-                    </form>
+                    </form> -->
+                    <div class="row w-100 m-auto mt-5 px-0">
+                        <div class="col-md-6 col-auto px-2 mb-3 mx-auto">
+                            <div class="card pt-3" >
+                                <GithubIcon 
+                                    class="mb-0 mx-lg-3 mx-auto"
+                                    :mode="dark_mode"
+                                    :height="40" 
+                                    :width="40" 
+                                ></GithubIcon>
+                                <div class="card-body">
+                                  <h5 class="card-title">Github</h5>
+                                  <a class="text-decoration-none mb-0" href="https://github.com/cessDevs1419">github.com/cessDevs1419</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-auto px-2 mb-3 mx-auto">
+                            <div class="card pt-3" >
+                                <LinkedIcon
+                                    class="mb-0 mx-2"
+                                    :mode="dark_mode"
+                                    :height="30" 
+                                    :width="30" 
+                                ></LinkedIcon>
+                                <div class="card-body">
+                                  <h5 class="card-title">LinkedIn</h5>
+                                  <a class="text-decoration-none mb-0" href="https://www.linkedin.com/in/francess-cillo-177b8a29a/">Francess Cillo</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-auto px-2 mb-3 mx-auto">
+                            <div class="card pt-3" >
+                                <TelegramIcon
+                                    class=" mb-0 mx-2"
+                                    :mode="dark_mode"
+                                    :height="40" 
+                                    :width="40" 
+                                ></TelegramIcon>
+                                <div class="card-body">
+                                  <h5 class="card-title">Telegram</h5>
+                                  <a class="text-decoration-none mb-0" href="https://t.me/frncs12357">Francess Cillo</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-auto px-2 mb-3 mx-auto">
+                            <div class="card pt-3" >
+                                <GmailIcon
+                                    class="mb-0 mx-2"
+                                    :mode="dark_mode"
+                                    :height="35" 
+                                    :width="35" 
+                                ></GmailIcon>
+                                <div class="card-body">
+                                  <h5 class="card-title">Gmail</h5>
+                                  <a class="text-decoration-none mb-0" href="https://francess12357@gmail.com">francess12357@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <div class="thanks full-height w-100 d-flex align-items-center primary-color" v-bind:class="[dark_mode ? 'primary-color':'bg-white']">
         <div class="container-md">
             <div class="title-container  me-lg-5 me-0 z-ult w-100 d-flex flex-column align-items-center justify-content-center">
@@ -195,7 +254,7 @@
     import GithubIcon from '../components/icons/GithubIcon.vue'
     import LinkedIcon from '@/components/icons/LinkedIcon.vue'
     import TelegramIcon from '@/components/icons/TelegramIcon.vue'
-
+    import GmailIcon from '@/components/icons/GmailIcon.vue'
     import Technologies from '@/assets/data/technologies.js'
     import Projects from '@/assets/data/projects.js'
     import AOS from 'aos';
@@ -297,7 +356,8 @@
             ParticlesComponent,
             GithubIcon,
             LinkedIcon,
-            TelegramIcon
+            TelegramIcon,
+            GmailIcon
         },
         
         props: {
