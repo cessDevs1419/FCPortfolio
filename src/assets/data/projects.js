@@ -28,11 +28,40 @@ import vmmeeting from '../projects/vm_meeting.png'
 import vmsettings from '../projects/vm_settings.png'
 import vmtask from '../projects/vm_task.png'
 
+import lappeev1land from '../projects/lappeev1-land.png'
+import lappeev1prodview from '../projects/lappeev1-prodview.png'
+import lappeev1prod from '../projects/lappeev1-prod.png'
+import lappeev1dash from '../projects/lappeev1-dash.png'
+import lappeev1cat from '../projects/lappeev1-cat.png'
+import lappeev1sales from '../projects/lappeev1-sales.png'
+
+
+
 const Projects = [
     {
-        name: 'Lappee',
-        description: 'Lappee is a website made for online shopping. It focuses on managing things easily and uses advanced technology like machine learning. This project was created as part of our school thesis.',
+        name: 'LappeeV1',
+        description: 'Lappee is a website made for online shopping. It focuses on managing things easily and uses advanced technology like machine learning. This project was created as part of our app dev project.',
         type: 'School Project',
+        images: [
+            lappeev1land,
+            lappeev1prodview,
+            lappeev1prod,
+            lappeev1dash,
+            lappeev1cat,
+            lappeev1sales
+        ],
+        technologies: [
+            'React JS',
+            'JavaScript',
+            'Html',
+            'Css',
+            'Laravel-Inertia'
+        ]
+    },
+    {
+        name: 'LappeeV2',
+        description: 'Lappee is a website made for online shopping. this project is a continuation of our app dev project. This project was created focus for our capstone thesis.',
+        type: 'Capstone Project',
         images: [
             lappeed1,
             lappeed2,
@@ -94,7 +123,7 @@ const Projects = [
             legislativetableview
         ],
         technologies: [
-            'Vue',
+            'VueJS',
             'JavaScript',
             'Html',
             'Bootstrap',
