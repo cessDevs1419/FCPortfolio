@@ -12,7 +12,7 @@
                             <a class="nav-link fw-semibold m-0 cursor-pointer" v-bind:class="[dark_mode ? 'text-white':'primary-font']" href="#home" >Home</a>
                             <a class="nav-link fw-semibold m-0 cursor-pointer" v-bind:class="[dark_mode ? 'text-white':'primary-font']" href="#about" >About</a>
                             <a class="nav-link fw-semibold m-0 cursor-pointer" v-bind:class="[dark_mode ? 'text-white':'primary-font']" href="#projects" >Projects</a>
-                            <!-- <a class="nav-link fw-semibold m-0 cursor-pointer" v-bind:class="[dark_mode ? 'text-white':'primary-font']" href="#contact" >Contact</a> -->
+                            <a class="nav-link fw-semibold m-0 cursor-pointer" v-bind:class="[dark_mode ? 'text-white':'primary-font']" href="#contact" >Contact</a>
                         </div>
                     </div>
                     <ToggleMode
