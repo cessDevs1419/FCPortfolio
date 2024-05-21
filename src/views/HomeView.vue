@@ -178,7 +178,7 @@
                         <div class="col-md-6 col-auto px-2 mb-3 mx-auto">
                             <div class="card pt-3" >
                                 <LinkedIcon
-                                    class="mb-0 mx-2"
+                                    class="mb-0 mx-lg-3 mx-auto"
                                     :mode="dark_mode"
                                     :height="30" 
                                     :width="30" 
@@ -192,7 +192,7 @@
                         <div class="col-md-6 col-auto px-2 mb-3 mx-auto">
                             <div class="card pt-3" >
                                 <TelegramIcon
-                                    class=" mb-0 mx-2"
+                                    class=" mb-0 mx-lg-3 mx-auto"
                                     :mode="dark_mode"
                                     :height="40" 
                                     :width="40" 
@@ -206,7 +206,7 @@
                         <div class="col-md-6 col-auto px-2 mb-3 mx-auto">
                             <div class="card pt-3" >
                                 <GmailIcon
-                                    class="mb-0 mx-2"
+                                    class="mb-0 mx-lg-3 mx-auto"
                                     :mode="dark_mode"
                                     :height="35" 
                                     :width="35" 
