@@ -35,6 +35,13 @@ import lappeev1dash from '../projects/lappeev1-dash.png'
 import lappeev1cat from '../projects/lappeev1-cat.png'
 import lappeev1sales from '../projects/lappeev1-sales.png'
 
+import maharlika from '../projects/maharlika.png'
+import Daton from '../projects/Daton.png'
+import lightblb from '../projects/lightblb.png'
+import Osam from '../projects/Osam.png'
+import mjestic from '../projects/mjestic.png'
+
+
 
 
 const Projects = [
@@ -180,6 +187,53 @@ const Projects = [
         technologies: [
             'Figma',
         ]
+    },
+    {
+        name: 'Daton Haywood',
+        description: 'Daton Haywood is a personal coaching website dedicated to empowering individuals through coaching, self-improvement, and mental well-being strategies. ',
+        type: 'Client',
+        images: [
+            Daton
+        ],
+        technologies: [
+            'Wordpress',
+        ],
+        link:'https://datonhaywood.com/'
+    },
+    {
+        name: 'Lightbulb Agency',
+        description: 'Lightbulb Agency provides marketing strategies aimed at helping businesses expand their market reach and boost their sales through targeted upselling techniques and other innovative approaches.',
+        type: 'Client',
+        images: [
+            lightblb
+        ],
+        technologies: [
+            'Wordpress',
+        ]
+    },
+    {
+        name: 'One Simple Act Movement',
+        description: 'One Simple Act Movement or (Osam) is a charity group showcasing their programs and charity events seeking for donation and allowing community to be part of their missions',
+        type: 'Client',
+        images: [
+            Osam
+        ],
+        technologies: [
+            'Wordpress',
+        ],
+        link:'https://onesimpleactmovement.com/'
+    },
+    {
+        name: 'Majestic',
+        description: 'Majestic is a packaging printing company that specializes in custom packaging solutions and offers a range of marketing upsells to enhance your brand&apos;s presence.',
+        type: 'Client',
+        images: [
+            mjestic
+        ],
+        technologies: [
+            'Wordpress',
+        ],
+        link:'https://majesticprintpackaging.com/'
     }
 ]
 

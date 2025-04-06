@@ -7,11 +7,10 @@ import githubLogo from '../technologies/github.png';
 import reactLogo from '../technologies/react.png';
 import angularLogo from '../technologies/angularjs.png';
 import vueLogo from '../technologies/vue.png';
-
+import wordpress from '../technologies/wordpress.png'
 
 const Technologies = [
-    htmlLogo,
-    cssLogo,
+    wordpress,
     jsLogo,
     tsLogo,
     vscodeLogo,
@@ -19,6 +18,7 @@ const Technologies = [
     reactLogo,
     angularLogo,
     vueLogo,
+    
 ]
 
 export default Technologies;

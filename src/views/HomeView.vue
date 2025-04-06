@@ -66,7 +66,7 @@
                         <h5 class="fw-semibold  m-0 me-3" >Get to know me</h5>
                     </div>
                     <p data-aos="zoom-in-up" class="mb-5" >
-                        I'm a BSIT student just waiting for graduation date and i have spent two years creating websites that adapt to different devices. I thrive in team settings and follow agile practices well. Integrating APIs and crafting front-end projects with Angular, React, and Vue.js are among my strengths. Currently, I'm diving into backend development using Laravel and Inertia to expand my expertise
+                        A passionate Production Manager with expertise in web development, business analysis, and quality assurance. Currently managing scheduling, graphics, and development in a marketing agency, while building WordPress sites and supporting app development. Skilled in IT solutions, automation, and custom features to optimize business models. Proficient in Agile, sprint development, and collaborating with backend developers and UI/UX designers. Experienced in API integration and Inertia to drive business growth.
                     </p>
                     <div class="technologies">
                         <div data-aos="fade-right" class="d-flex justify-content-lg-start justify-content-center align-items-center m-auto mb-3">
@@ -116,14 +116,19 @@
                                 </div>
                             </div>
                             <div class="col-auto">
-                                <div class="card-body" v-bind:class="[dark_mode ? 'text-white':'primary-font']">
+                                <div class="card-container card-body d-flex flex-column justify-content-end" v-bind:class="[dark_mode ? 'text-white':'primary-font']">
                                     <h5 class="card-title fw-bold">{{project.name}}</h5>
-                                    <p class="card-text">{{project.description}}</p>
-                                    <ul class="list-unstyled d-flex flex-wrap">
-                                      <li class="tech cursor-pointer text-decoration-none px-3 mb-2 py-2 border border-2 m-auto rounded-4 " v-for="(tech, index) in project.technologies" :key="index" >
-                                          {{ tech }}
-                                      </li>
-                                    </ul>
+                                    <div>
+                                        <p class="card-text ">{{project.description}}</p>
+                                        <div v-if="project.link" class="mb-2 d-flex justify-content-center  ">
+                                            <a  :href="project.link" class="card-text">Click Here to Browse Live</a>
+                                        </div>
+                                        <ul class="list-unstyled d-flex flex-wrap">
+                                        <li class="tech cursor-pointer text-decoration-none px-3 mb-2 py-2 border border-2 m-auto rounded-4 " v-for="(tech, index) in project.technologies" :key="index" >
+                                            {{ tech }}
+                                        </li>
+                                        </ul>
+                                    </div>
                                   </div>
                             </div>
                         </div>
@@ -274,8 +279,8 @@
                 sleepTime: 100,
                 wordIndex: 0,
                 typewriterTimeout: 0,
-                words: ["Front End Developer", "UI/UX Designer", "QA Tester"],
-                wordColors: ["-green", "-yellow", "-red"],
+                words: ["Front End Developer", "Wordpress Developer", "QA Tester", "IT Business Analyst", "Production Manager"],
+                wordColors: ["-green", "-yellow", "-red", "-blue", "-pink"],
                 currentLoopText: "Front End Developer",
                 currentWordColor: "-green",
             }
@@ -399,7 +404,9 @@
         max-width: 600px;
         min-width: 250px
     }
-
+    .card-container{
+        min-height: 250px;
+    }
     .tech{
         max-width: fit-content;
         min-width: fit-content;
