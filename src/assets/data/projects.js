@@ -222,18 +222,6 @@ const Projects = [
             'Wordpress',
         ],
         link:'https://onesimpleactmovement.com/'
-    },
-    {
-        name: 'Majestic',
-        description: 'Majestic is a packaging printing company that specializes in custom packaging solutions and offers a range of marketing upsells to enhance your brand&apos;s presence.',
-        type: 'Client',
-        images: [
-            mjestic
-        ],
-        technologies: [
-            'Wordpress',
-        ],
-        link:'https://majesticprintpackaging.com/'
     }
 ]
 
