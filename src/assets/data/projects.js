@@ -40,7 +40,7 @@ import Daton from '../projects/Daton.png'
 import lightblb from '../projects/lightblb.png'
 import Osam from '../projects/Osam.png'
 import mjestic from '../projects/mjestic.png'
-
+import teamcocreate from '../projects/teamcocreate.png'
 
 
 
@@ -222,6 +222,18 @@ const Projects = [
             'Wordpress',
         ],
         link:'https://onesimpleactmovement.com/'
+    },
+    {
+        name: 'Teamcocreate',
+        description: 'Teamcocreate is a collaborative platform built on WordPress, designed to empower businesses and creative teams with user-friendly, dynamic solutions. The website highlights the brand’s mission of co-creation, offering a clean, responsive design and seamless functionality to engage clients and showcase their services effectively',
+        type: 'Client',
+        images: [
+            teamcocreate
+        ],
+        technologies: [
+            'Wordpress',
+        ],
+        link:'https://teamcocreate.com/'
     }
 ]
 
